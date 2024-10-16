@@ -1,0 +1,6 @@
+We can choose AKS for the implementation with public-facing ingress using nginx ingress controller to manage traffic to the web services and azure API management for routing, rate-limiting and authenticating/authentication.
+Node pools configured for scalability, with autoscaling enabled to handle varying workloads
+for security measure for public apis we can use TLS/SSL termination at the ingress layer, ensuring all traffic in encrypted
+for monitoring and alerts for connectivity to internal systems and to ensure support team is notified if web services lose connectivity to internal systems we can use Azure monitor, k8s liveliness and readiness probes to ensure services are healthy and set up azure alerts to support team.
+And for automated deployments we can use Azure devops and helm charts to manage kubernetes deployments.
+And vnet peering for AKS vnet and vnet of internal systems to allow private secure connection between aks and internal systems
